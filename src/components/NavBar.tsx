@@ -1,7 +1,6 @@
-import Icon from '../assets/react.svg'
-import { Button, Navbar } from 'react-daisyui'
 
-const Nav: React.FC = () => {
+
+const Nav = () => {
 
 
   return (
