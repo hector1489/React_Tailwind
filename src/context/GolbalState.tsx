@@ -1,5 +1,6 @@
-import React, { createContext, ReactNode, useState, Dispatch, SetStateAction, useMemo } from "react";
+import { createContext, ReactNode, useState, Dispatch, SetStateAction, useMemo, useEffect } from "react";
 import IRecord from "../interfaces/IRecord";
+import dataJson from "../data.json"
 
 interface IState {
     IsHero: Array<IRecord>,
@@ -24,6 +25,14 @@ const AppProvider: React.FC<IAppProviderProps> = ({ children }: IAppProviderProp
         IsGalleryServices: [],
         IsTestimonials: [],
     });
+
+    useEffect(() => {
+        setState({
+          IsHero: dataJson,
+          IsGalleryServices: [],
+          IsTestimonials: [],
+        });
+      }, []);
 
     const contextValue = useMemo(() => ({ state, setState }), [state, setState]);
 
