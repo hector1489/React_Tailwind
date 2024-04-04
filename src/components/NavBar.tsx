@@ -6,10 +6,10 @@ const Nav = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">E-commerce</a>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
           <li>
             <NavLink to="/" >Home</NavLink>
           </li>
@@ -27,6 +27,9 @@ const Nav = () => {
                 </li>
               </ul>
             </details>
+          </li>
+          <li>
+            <NavLink to="cart" >🛒</NavLink>
           </li>
         </ul>
       </div>

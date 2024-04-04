@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import Home from './views/Home'
 import MainGallery from "./components/MainGallery"
 import Testimonials from "./components/Testimonials"
+import CartViews from "./views/CartViews"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="gallery" element={<MainGallery />} />
         <Route path="testimonials" element={<Testimonials />} />
+        <Route path="cart" element={<CartViews />} />
       </Routes>
     </BrowserRouter>
   )
