@@ -22,6 +22,7 @@ const MainGallery = () => {
           <div className="card-body p-4">
             <h2 className="card-title text-lg font-semibold mb-2">{item.title}</h2>
             <p className="text-sm mb-4">{item.description}</p>
+            <p className="text-sm mb-4">$ {item.price}</p>
             <div className="card-actions flex justify-end">
               <a href={item.link} className="btn btn-primary">
                 Buy Now

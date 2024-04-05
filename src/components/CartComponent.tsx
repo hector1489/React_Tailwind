@@ -7,7 +7,7 @@ const CartComponent = () => {
         {/* head */}
         <thead>
           <tr>
-            <th></th>
+            <th>Count</th>
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>

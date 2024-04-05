@@ -1,20 +1,26 @@
 [
   {
+    "id": 1,
     "urlImage": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
     "title": "Title 1",
     "description": "Description 1",
-    "link": "https://example.com/link1"
+    "link": "https://example.com/link1",
+    "price": 5000
   },
   {
+    "id": 2,
     "urlImage": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
     "title": "Title 2",
     "description": "Description 2",
-    "link": "https://example.com/link2"
+    "link": "https://example.com/link2",
+    "price": 5000
   },
   {
+    "id": 3,
     "urlImage": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
     "title": "Title 3",
     "description": "Description 3",
-    "link": "https://example.com/link3"
+    "link": "https://example.com/link3",
+    "price": 5000
   }
 ]
