@@ -5,7 +5,8 @@
     "title": "Title 1",
     "description": "Description 1",
     "link": "https://example.com/link1",
-    "price": 5000
+    "price": 5000,
+    "quantity": 0
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "title": "Title 2",
     "description": "Description 2",
     "link": "https://example.com/link2",
-    "price": 5000
+    "price": 5000,
+    "quantity": 0
   },
   {
     "id": 3,
@@ -21,6 +23,7 @@
     "title": "Title 3",
     "description": "Description 3",
     "link": "https://example.com/link3",
-    "price": 5000
+    "price": 5000,
+    "quantity": 0
   }
 ]

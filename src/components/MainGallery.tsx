@@ -9,8 +9,18 @@ const MainGallery = () => {
     return null
   }
 
-  const { state } = contextValue;
+  const { state, setState } = contextValue;
   const galleryData: Array<IRecord> = state.IsHero
+
+  const addToCart = (id: number) => {
+    const updatedGalleryData = galleryData.map(item =>
+      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setState(prevState => ({
+      ...prevState,
+      IsHero: updatedGalleryData,
+    }))
+  }
 
   return (
     <div className="flex flex-wrap justify-center gap-4 mt-4">
@@ -24,9 +34,9 @@ const MainGallery = () => {
             <p className="text-sm mb-4">{item.description}</p>
             <p className="text-sm mb-4">$ {item.price}</p>
             <div className="card-actions flex justify-end">
-              <a href={item.link} className="btn btn-primary">
-                Buy Now
-              </a>
+              <button onClick={() => addToCart(item.id)} className="btn btn-primary">
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -34,5 +44,6 @@ const MainGallery = () => {
     </div>
   )
 }
+
 
 export default MainGallery

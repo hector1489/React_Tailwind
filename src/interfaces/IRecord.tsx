@@ -4,7 +4,8 @@ interface IRecord {
     title: string,
     description: string,
     link: string,
-    price: number
+    price: number,
+    quantity: number;
 }
 
 export default IRecord
