@@ -9,8 +9,12 @@ const CartComponent = () => {
     return null;
   }
 
-  const { state } = contextValue;
+  const { state, removeFromCart } = contextValue;
   const cartItems: Array<IRecord> = state.IsHero.filter(item => item.quantity > 0);
+
+  const handleRemoveFromCart = (itemId: number) => {
+    removeFromCart(itemId);
+  }
 
   return (
     <div className="overflow-x-auto">
@@ -22,6 +26,7 @@ const CartComponent = () => {
             <th>Description</th>
             <th>Price</th>
             <th>Total</th>
+            <th>Delele</th>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +37,9 @@ const CartComponent = () => {
               <td>{item.description}</td>
               <td>{item.price}</td>
               <td>{item.quantity * item.price}</td>
+              <td>
+                <button className="btn btn-error" onClick={() => handleRemoveFromCart(item.id)}>Del</button>
+              </td>
             </tr>
           ))}
         </tbody>

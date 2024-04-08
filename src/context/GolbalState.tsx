@@ -11,6 +11,7 @@ interface IState {
 interface IContextProps {
     state: IState;
     setState: Dispatch<SetStateAction<IState>>;
+    removeFromCart: (itemId: number) => void;
 }
 
 const AppContext = createContext<IContextProps | undefined>(undefined);
@@ -34,7 +35,22 @@ const AppProvider: React.FC<IAppProviderProps> = ({ children }: IAppProviderProp
         });
       }, []);
 
-    const contextValue = useMemo(() => ({ state, setState }), [state, setState]);
+      const removeFromCart = (itemId: number) => {
+        setState(prevState => ({
+          ...prevState,
+          IsHero: prevState.IsHero.map(item => {
+            if (item.id === itemId) {
+              return {
+                ...item,
+                quantity: 0
+              };
+            }
+            return item;
+          })
+        }));
+      };
+
+    const contextValue = useMemo(() => ({ state, setState, removeFromCart }), [state, setState]);
 
     return (
         <AppContext.Provider value={contextValue}>
